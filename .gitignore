@@ -1,7 +1,5 @@
-assets/*
 data/*
 __pycache__/*
 checkpoints/*
-assets
 data
 checkpoints
