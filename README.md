@@ -12,12 +12,12 @@ This repository is the implementation of [PointWOLF]().
 $ python main.py --exp_name=origin --model=dgcnn --num_points=1024 --k=20 --use_sgd=True
 ```
 
-- Run the training w PointWOLF, w/o AugTune:  
+- Run the training w **PointWOLF**, w/o AugTune:  
 ```
 $ python main.py --exp_name=PointWOLF --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --PointWOLF
 ```
 
-- Run the training w PointWOLF, AugTune:  
+- Run the training w **PointWOLF**, **AugTune**:  
 ```
 $ python main.py --exp_name=PointWOLF_AugTune --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --PointWOLF --AugTune
 ```
