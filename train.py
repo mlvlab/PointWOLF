@@ -6,7 +6,7 @@
 modified by {Sanghyeok Lee, Sihyeon Kim}
 @Contact: {cat0626, sh_bs15}@korea.ac.kr
 @File: train.py
-@Time: 2021.09.30
+@Time: 2021.09.29
 """
 
 import torch
@@ -49,12 +49,10 @@ def train_vanilla(args, io):
         opt = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
 
     scheduler = CosineAnnealingLR(opt, args.epochs, eta_min=args.lr)
-    
     criterion = cal_loss
-
     best_test_acc = 0
+    
     for epoch in range(args.epochs):
-        scheduler.step()
         ####################
         # Train
         ####################
@@ -77,6 +75,8 @@ def train_vanilla(args, io):
             train_loss += loss.item() * batch_size
             train_true.append(label.cpu().numpy())
             train_pred.append(preds.detach().cpu().numpy())
+            
+        scheduler.step()
         train_true = np.concatenate(train_true)
         train_pred = np.concatenate(train_pred)
         outstr = 'Train %d, loss: %.6f, train acc: %.6f, train avg acc: %.6f' % (epoch,
@@ -147,12 +147,10 @@ def train_AugTune(args, io):
         opt = optim.Adam(model.parameters(), lr=args.lr, weight_decay=1e-4)
 
     scheduler = CosineAnnealingLR(opt, args.epochs, eta_min=args.lr)
-    
     criterion = cal_loss
-
     best_test_acc = 0
+    
     for epoch in range(args.epochs):
-        scheduler.step()
         ####################
         # Train
         ####################
@@ -199,6 +197,7 @@ def train_AugTune(args, io):
             train_true.append(label.cpu().numpy())
             train_pred.append(preds.detach().cpu().numpy())
             
+        scheduler.step()
         train_true = np.concatenate(train_true)
         train_pred = np.concatenate(train_pred)
         outstr = 'Train %d, loss: %.6f, train acc: %.6f, train avg acc: %.6f' % (epoch,
