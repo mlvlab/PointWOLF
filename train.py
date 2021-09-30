@@ -279,7 +279,7 @@ def normalize_point_cloud_batch(pointcloud):
     output :
         pointcloud([B,N,3]) : Normalized Pointclouds
     """
-    pointcloud = pointcloud - pointcloud.mean(dim=-2, keepdim=True) #(B,3,N)
+    pointcloud = pointcloud - pointcloud.mean(dim=-1, keepdim=True) #(B,3,N)
     scale = 1/torch.sqrt((pointcloud**2).sum(1)).max(axis=1)[0]*0.999999 # (B)
     pointcloud = scale.view(-1, 1, 1) * pointcloud
     return pointcloud
