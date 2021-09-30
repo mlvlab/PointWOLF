@@ -9,6 +9,8 @@ This repository is the implementation of [PointWOLF]().
 # Installation
 
 # Runnig the code
+
+**train**
 - Run the training without PointWOLF & AugTune:  
 ```
 $ python main.py --exp_name=origin --model=dgcnn --num_points=1024 --k=20 --use_sgd=True
