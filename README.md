@@ -22,7 +22,7 @@ $ python main.py --exp_name=PointWOLF --model=dgcnn --num_points=1024 --k=20 --u
 $ python main.py --exp_name=PointWOLF_AugTune --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --PointWOLF --AugTune
 ```
 
-- Run the evaluation with trained model located at **${PATH}**:  
+- Run the evaluation with trained model located at `${PATH}`:  
 ```
 $ python main.py --exp_name=eval --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --eval=True --model_path=${PATH}
 ```
