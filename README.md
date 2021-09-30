@@ -24,7 +24,8 @@ $ git clone ???
 
 **Download ModelNet40**  
 
-**Notes** : When you run the `main.py`, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`. If you want to download dataset on ${path}, see below.
+**Notes** : When you run the `main.py`, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`.  
+If you want to download dataset on `${path}`, see below.
 
 ```
 $ cd ${path}
