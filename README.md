@@ -7,6 +7,18 @@ This repository is the implementation of PointWOLF\(To appear\).
 ![PointWOLF_main](https://user-images.githubusercontent.com/49049753/129553285-d7ea163b-c5a1-4b6c-ba98-077616d2b953.png)
 
 # Installation
+**Dependencies**
+- CUDA 10.2.
+- Python 3.7.1.
+- torch 1.7.0.
+- sklearn 0.24.1
+- numpy
+- h5py
+
+**Download the code**
+```
+$ git clone ???
+```
 
 # Runnig the code
 
