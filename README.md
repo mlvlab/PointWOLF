@@ -4,4 +4,4 @@
 
 
 # Acknowledgement
-The structure of this codebase is borrowed from (Dynamic Graph CNN for Learning on Point Clouds)[https://github.com/WangYueFt/dgcnn].
+The structure of this codebase is borrowed from [Dynamic Graph CNN for Learning on Point Clouds](https://github.com/WangYueFt/dgcnn).
