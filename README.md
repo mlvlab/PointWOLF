@@ -16,12 +16,14 @@ This repository is the implementation of PointWOLF\(To appear\).
 - h5py
 
 ## Download
-Clone repository:
+**Clone repository**  
+
 ```
 $ git clone ???
 ```
 
-Download ModelNet40:  
+**Download ModelNet40**  
+
 **Notes** : When you run the `main.py`, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`. If you want to download dataset on ${path}, see below.
 
 ```
