@@ -8,9 +8,9 @@ This repository is the implementation of PointWOLF\(To appear\).
 
 # Installation
 ## Dependencies
-- CUDA 10.2.
-- Python==3.7.1.
-- torch==1.7.0.
+- CUDA 10.2
+- Python==3.7.1
+- torch==1.7.0
 - sklearn==0.24.1
 - numpy
 - h5py
