@@ -11,6 +11,7 @@ This repository is the implementation of [PointWOLF]().
 # Runnig the code
 
 **train**
+
 - Run the training without PointWOLF & AugTune:  
 ```
 $ python main.py --exp_name=origin --model=dgcnn --num_points=1024 --k=20 --use_sgd=True
@@ -25,6 +26,9 @@ $ python main.py --exp_name=PointWOLF --model=dgcnn --num_points=1024 --k=20 --u
 ```
 $ python main.py --exp_name=PointWOLF_AugTune --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --PointWOLF --AugTune
 ```
+
+
+**eval**
 
 - Run the evaluation with trained model located at `${PATH}`:  
 ```
