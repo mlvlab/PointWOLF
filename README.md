@@ -11,9 +11,7 @@ This repository is the implementation of PointWOLF\(To appear\).
 - CUDA 10.2
 - Python==3.7.1
 - torch==1.7.0
-- sklearn==0.24.1
-- numpy
-- h5py
+- packages : sklearn, numpy, h5py, glob
 
 ## Download
 **Clone repository**  
@@ -62,12 +60,10 @@ $ python main.py --exp_name=eval --model=dgcnn --num_points=1024 --k=20 --use_sg
 ```
 
 # Citation
-```
-To appear
-```
+
 
 # License
 MIT License
 
 # Acknowledgement
-The structure of this codebase is borrowed from [Dynamic Graph CNN for Learning on Point Clouds](https://github.com/WangYueFt/dgcnn).
+The structure of this codebase is borrowed from [DGCNN](https://github.com/WangYueFt/dgcnn).
