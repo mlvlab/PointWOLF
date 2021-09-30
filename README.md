@@ -6,6 +6,27 @@ This repository is the implementation of [PointWOLF]().
 
 ![PointWOLF_main](https://user-images.githubusercontent.com/49049753/129553285-d7ea163b-c5a1-4b6c-ba98-077616d2b953.png)
 
+# Runnig the code
+- Run the training w/o PointWOLF & AugTune:
+'''
+$ python main.py --exp_name=origin --model=dgcnn --num_points=1024 --k=20 --use_sgd=True
+'''
+
+- Run the training w PointWOLF, w/o AugTune:
+'''
+$ python main.py --exp_name=PointWOLF --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --PointWOLF
+'''
+
+- Run the training w PointWOLF, AugTune:
+'''
+$ python main.py --exp_name=PointWOLF_AugTune --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --PointWOLF --AugTune
+'''
+
+- Run the evaluation with trained models:
+'''
+$ python main.py --exp_name=eval --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --eval=True --model_path={$weight_path$}
+'''
+
 
 # Acknowledgement
 The structure of this codebase is borrowed from [Dynamic Graph CNN for Learning on Point Clouds](https://github.com/WangYueFt/dgcnn).
