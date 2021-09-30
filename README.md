@@ -3,6 +3,7 @@
 This repository is the implementation of PointWOLF\(To appear\).
 
 > Sihyeon Kim<sup>1*</sup>, Sanghyeok Lee<sup>1*</sup>, Dasol Hwang<sup>1</sup>, Jaewon Lee<sup>1</sup>, Seong Jae Hwang<sup>2</sup>, Hyunwoo J. Kim<sup>1†</sup>, Point Cloud Augmentation with Weighted Local Transformations (ICCV 2021).
+> <sup>1</sup>Korea University <sup>2</sup>University of Pittsburgh
 
 ![PointWOLF_main](assets/PointWOLF_main.png)
 
