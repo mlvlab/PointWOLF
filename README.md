@@ -22,15 +22,14 @@ $ git clone ???
 ```
 
 Download ModelNet40:
+**Notes** : When you run the `main.py`, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`. If you want to download dataset on ${path}, see below.
+
 ```
-$ cd PointWOLF
-$ mkdir data; cd data
+$ cd ${path}
 $ wget https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip --no-check-certificate
 $ unzip modelnet40_ply_hdf5_2048.zip
 $ rm modelnet40_ply_hdf5_2048.zip
-$ cd..
 ```
-**Notes** : If you run the `main.py`, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`
 
 # Runnig the code
 
