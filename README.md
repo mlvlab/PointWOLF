@@ -29,7 +29,7 @@ $ wget https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip --no-
 $ unzip modelnet40_ply_hdf5_2048.zip
 $ rm modelnet40_ply_hdf5_2048.zip
 ```
-**Notes** : If you run the main.py first, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`
+**Notes** : If you run the main.py, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`
 
 # Runnig the code
 
