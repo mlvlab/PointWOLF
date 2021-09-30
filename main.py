@@ -30,6 +30,7 @@ def _init_():
     os.system('cp util.py checkpoints' + '/' + args.exp_name + '/' + 'util.py.backup')
     os.system('cp data.py checkpoints' + '/' + args.exp_name + '/' + 'data.py.backup')
     os.system('cp PointWOLF.py checkpoints' + '/' + args.exp_name + '/' + 'PointWOLF.py.backup')
+    os.system('cp train.py checkpoints' + '/' + args.exp_name + '/' + 'train.py.backup')
 
 
 
