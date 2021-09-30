@@ -16,9 +16,20 @@ This repository is the implementation of PointWOLF\(To appear\).
 - h5py
 
 ## Download the code
+Clone repository:
 ```
 $ git clone ???
 ```
+
+Download ModelNet40:
+```
+$ cd PointWOLF
+$ mkdir data; cd data
+$ wget https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip --no-check-certificate
+$ unzip modelnet40_ply_hdf5_2048.zip
+$ rm modelnet40_ply_hdf5_2048.zip
+```
+**Notes** : If you run the main.py first, ModelNet40 is automatically downloaded at `.../PointWOLF/data/`
 
 # Runnig the code
 
