@@ -61,6 +61,13 @@ $ python main.py --exp_name=PointWOLF_AugTune --model=dgcnn --num_points=1024 --
 $ python main.py --exp_name=eval --model=dgcnn --num_points=1024 --k=20 --use_sgd=True --eval=True --model_path=${PATH}
 ```
 
+# Citation
+```
+To appear
+```
+
+# License
+MIT License
 
 # Acknowledgement
 The structure of this codebase is borrowed from [Dynamic Graph CNN for Learning on Point Clouds](https://github.com/WangYueFt/dgcnn).
