@@ -150,7 +150,7 @@ class PointWOLF(object):
             n_axis(int)
             
         output :
-            axis([M,3]) : projection axis   
+            axis([n_axis,3]) : projection axis   
         """
         axis = np.random.randint(1,8, (n_axis)) # 1(001):z, 2(010):y, 3(011):yz, 4(100):x, 5(101):xz, 6(110):xy, 7(111):xyz    
         m = 3 
