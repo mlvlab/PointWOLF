@@ -156,6 +156,7 @@ def train_AugTune(args, io):
         ####################
         train_loss = 0.0
         count = 0.0
+        model.train()
         train_pred = []
         train_true = []
         for origin, data, label in train_loader:
@@ -166,25 +167,23 @@ def train_AugTune(args, io):
             
             #Forward original & augmented sample to get confidence score
             with torch.no_grad():
-                model.eval()
                 pred_origin = model(origin)
                 pred_data = model(data)
                 c_origin = (pred_origin.exp() * F.one_hot(label, pred_origin.shape[-1])).sum(1) #(B)
                 c_data = (pred_data.exp() * F.one_hot(label, pred_data.shape[-1])).sum(1) #(B)
-                x0=data
-                #Calculate Target Confidence Score
-                c_target = torch.max((1-args.l) * c_origin, c_data) #(B)
-                alpha = ((c_target-c_data)/(c_origin-c_data + 1e-4)).unsqueeze(1) 
-                alpha = torch.clamp(alpha, min=0, max=1).reshape(-1,1,1)
+
+            #Calculate Target Confidence Score
+            c_target = torch.max((1-args.l) * c_origin, c_data) #(B)
+            alpha = ((c_target-c_data)/(c_origin-c_data + 1e-4)).unsqueeze(1) 
+            alpha = torch.clamp(alpha, min=0, max=1).reshape(-1,1,1)
+
+            #Tune the Sample with alpha
+            data = alpha * origin + (1-alpha) * data
+            #Re-normalize Tuned Sample
+            data = normalize_point_cloud_batch(data)
+            #CDA
+            data = translate_pointcloud_batch(data)
                 
-                #Tune the Sample with alpha
-                data = alpha * origin + (1-alpha) * data
-                #Re-normalize Tuned Sample
-                data = normalize_point_cloud_batch(data)
-                #CDA
-                data = translate_pointcloud_batch(data)
-                
-            model.train()
             opt.zero_grad()
             logits = model(data)
             loss = criterion(logits, label)
@@ -274,10 +273,10 @@ def test(args, io):
 def normalize_point_cloud_batch(pointcloud):
     """
     input : 
-        pointcloud([B,N,3])
+        pointcloud([B,3,N])
         
     output :
-        pointcloud([B,N,3]) : Normalized Pointclouds
+        pointcloud([B,3,N]) : Normalized Pointclouds
     """
     pointcloud = pointcloud - pointcloud.mean(dim=-1, keepdim=True) #(B,3,N)
     scale = 1/torch.sqrt((pointcloud**2).sum(1)).max(axis=1)[0]*0.999999 # (B)
@@ -288,10 +287,10 @@ def normalize_point_cloud_batch(pointcloud):
 def translate_pointcloud_batch(pointcloud):
     """
     input : 
-        pointcloud([B,N,3])
+        pointcloud([B,3,N])
         
     output :
-        translated_pointcloud([B,N,3]) : Pointclouds after CDA
+        translated_pointcloud([B,3,N]) : Pointclouds after CDA
     """
     B, _, _ = pointcloud.shape
     
