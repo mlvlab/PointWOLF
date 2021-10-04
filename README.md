@@ -64,7 +64,7 @@ $ python main.py --exp_name=eval --model=dgcnn --num_points=1024 --k=20 --use_sg
 
 
 # License
-[MIT License](https://github.com/mlvlab/PointWOLF/blob/main/LICENSE)
+[MIT License](https://github.com/mlvlab/PointWOLF/blob/master/LICENSE)
 
 # Acknowledgement
 The structure of this codebase is borrowed from [DGCNN](https://github.com/WangYueFt/dgcnn).
