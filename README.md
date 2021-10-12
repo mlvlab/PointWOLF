@@ -61,7 +61,16 @@ $ python main.py --exp_name=eval --model=dgcnn --num_points=1024 --k=20 --use_sg
 ```
 
 # Citation
-
+```
+@InProceedings{Kim_2021_ICCV,
+    author    = {Kim, Sihyeon and Lee, Sanghyeok and Hwang, Dasol and Lee, Jaewon and Hwang, Seong Jae and Kim, Hyunwoo J.},
+    title     = {Point Cloud Augmentation With Weighted Local Transformations},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {548-557}
+}
+```
 
 # License
 [MIT License](https://github.com/mlvlab/PointWOLF/blob/master/LICENSE)
