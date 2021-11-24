@@ -1,6 +1,6 @@
 # PointWOLF: Point Cloud Augmentation with Weighted Local Transformations
 
-This repository is the implementation of PointWOLF\([paper](https://openaccess.thecvf.com/content/ICCV2021/html/Kim_Point_Cloud_Augmentation_With_Weighted_Local_Transformations_ICCV_2021_paper.html)\).
+This repository is the implementation of PointWOLF\( [paper](https://openaccess.thecvf.com/content/ICCV2021/html/Kim_Point_Cloud_Augmentation_With_Weighted_Local_Transformations_ICCV_2021_paper.html) \).
 
 > Sihyeon Kim<sup>1*</sup>, Sanghyeok Lee<sup>1*</sup>, Dasol Hwang<sup>1</sup>, Jaewon Lee<sup>1</sup>, Seong Jae Hwang<sup>2</sup>, Hyunwoo J. Kim<sup>1†</sup>, Point Cloud Augmentation with Weighted Local Transformations (ICCV 2021).  
 > <sup>1</sup>Korea University <sup>2</sup>University of Pittsburgh
